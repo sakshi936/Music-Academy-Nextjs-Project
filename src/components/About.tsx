@@ -1,13 +1,17 @@
 "use client";
 
+import { cn } from "@/utils/cn";
+import { Boxes } from "./ui/background-boxes";
+
 function About() {
 	return (
-		<div className="h-[40rem] w-full dark:bg-slate-900 bg-white  dark:bg-grid-blck/[0.02] bg-grid-black/[0.2] relative flex items-center justify-center px-10">
-			{/* Radial gradient for the container to give a faded look */}
-			<div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-[#000319] bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-			<div className="mx-auto w-[50rem]">
-				<h1 className="text-6xl font-semibold text-center">Welcome to Space Music Academy,</h1>
-				<p className="mt-4 text-center text-gray-400">
+		<div className=" relative w-full h-screen overflow-hidden bg-slate-900 flex flex-col items-center justify-center rounded-lg">
+			<div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
+
+			<Boxes />
+			<div className=" w-[50rem] text-center">
+				<h1 className={cn("md:text-6xl text-5xl font-semibold text-white relative z-20 ")}>Welcome to Space Music Academy,</h1>
+				<p className="  mt-4 text-center text-gray-100 ">
 					Welcome to Space Music Academy, where passion meets excellence! At Harmony, we believe that music has the power to transform lives, and we are dedicated to nurturing the
 					musical talents of our students. Founded on the principles of creativity, discipline, and artistic expression, our academy offers a comprehensive range of programs for
 					students of all ages and skill levels.Our mission is to provide high-quality music education that inspires and empowers students to achieve their full potential. We strive to
